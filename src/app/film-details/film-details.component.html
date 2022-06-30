@@ -1,0 +1,15 @@
+
+
+<div class="container">
+
+  <button class="btn btn-primary mt-2 mb-2" routerLink="/my-films">   Retour </button>
+    <h1>Fiche film - {{ film.name }}</h1>
+    <span>Nom: {{ film.name }}</span
+    ><br />
+    <span>Synopsis: {{ film.synopsis || "Pas de synopsis" }}</span
+    ><br />
+    <span>Note: {{ film.note || 0 }}</span
+    ><br />
+  <button class="btn btn-primary mt-2" [routerLink]="['/edit-film', film.id]"> Modifier </button>
+  
+</div>

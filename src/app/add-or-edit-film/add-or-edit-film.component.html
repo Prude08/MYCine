@@ -1,0 +1,44 @@
+<div class="container">
+  <h1>Formulaire film</h1>
+  <form [formGroup]="filmForm">
+    <label for="name">Nom</label>
+    <div class="mb-3 col-md-4">
+      <input
+        id="name"
+        class="form-control"
+        type="text"
+        formControlName="name"
+      />
+    </div>
+    <div class="mb-3 col-md-4">
+      <label for="synopsis">Synopsis</label>
+      <textarea id="synopsis" class="form-control" formControlName="synopsis">
+      </textarea>
+    </div>
+    <div class="mb-3 col-md-4">
+      <label for="note">Note</label>
+      <input
+        id="note"
+        class="form-control"
+        type="number"
+        formControlName="note"
+      />
+    </div>
+    <button
+      class="btn btn-primary"
+      type="button"
+      [disabled]="!filmForm.valid"
+      (click)="addOrEditFilm()"
+    >
+      {{ button }}
+    </button>
+    <button
+      class="btn btn-primary"
+      type="button"
+      routerLink="/my-films"
+      style="margin-left: 10px"
+    >
+      Retour
+    </button>
+  </form>
+</div>
